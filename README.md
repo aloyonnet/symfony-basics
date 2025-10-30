@@ -1,0 +1,76 @@
+Symfony Basics
+========================
+
+Un projet qui utilise Symfony pour créer un site internet en mettant en place différents éléments proposés par le framework.
+
+Il propose les options suivantes :
+  * Connexion / Inscription / Déconnexion
+  * Une Administration (gestion des rôles & des accès)
+  * Des Entrypoints spécifiques à la partie visiteur & administration du site
+
+Nécessaire
+------------
+
+  * PHP 8 ou plus
+  * plus sur [besoins de symfony][1]
+
+Installation
+------------
+
+Cloner le projet:
+
+```bash
+$ git clone https://github.com/aloyonnet/symfony-basics.git
+```
+
+Créer le fichier .env:
+
+```bash
+$ cp .env-template .env
+```
+
+Installer les dépendances:
+
+```bash
+$ composer install
+```
+
+Créer le lien avec la base de données:
+```bash
+/.env
+$ DATABASE_URL=...
+```
+
+Créer la base de données et son contenu:
+```bash
+//create the database
+$ php bin/console doctrine:database:create
+//generate the migration
+$ php bin/console make:migration
+//execute the migration
+$ php bin/console doctrine:migrations:migrate
+```
+
+Charger les utilisateurs fournis par défaut :
+```bash
+$ php bin/console doctrine:fixtures:load
+```
+
+Utilisation
+-----
+
+Comptes disponibles avec les Fixtures (utilisateur/mot de passe) :
+
+* admin/test
+* user/test
+
+Pour un environnement de développement il est possible de lancer un serveur (utilisant <http://localhost:8000> par défaut) avec :
+
+```bash
+$ symfony serve
+```
+
+Si le binary de symfony n'est pas installé, on peut utiliser la commande qui suit:
+`php -S localhost:8000 -t public/`
+
+[1]: https://symfony.com/doc/current/reference/requirements.html

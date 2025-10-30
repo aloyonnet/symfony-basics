@@ -1,0 +1,34 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Inscription{% endblock %}
+
+{% block body %}
+    <h1>Inscription</h1>
+
+    {{ form_errors(registrationForm) }}
+
+    {{ form_start(registrationForm) }}
+        {{ form_row(registrationForm.username, {
+            label: 'Utilisateur',
+            attr: {
+                'class': 'form-control'
+                }
+        }) }}
+        {{ form_row(registrationForm.plainPassword, {
+            label: 'Mot de passe',
+            attr: {
+                'class': 'form-control'
+                }
+        }) }}
+        {{ form_row(registrationForm.agreeTerms, {
+            label: 'Conditions d\'utilisation',
+            attr: {
+                'class': 'form-check-input'
+                }
+        }) }}
+
+        <button class="btn btn-lg btn-primary mt-1" type="submit">
+            Valider
+        </button>
+    {{ form_end(registrationForm) }}
+{% endblock %}
