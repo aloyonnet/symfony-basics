@@ -10,17 +10,16 @@
 
 {% if app.user %}
     <div class="card m-3">
-    <h5 class="card-header">Vous êtes connecté</h5>
-    <div class="card-body">
-        <h5 class="card-title">Bienvenue {{ app.user.username }}</h5>
-        <p class="card-text">Vous avez pu vous connecter grâce au système d'utilisateur de Symfony</p>
-        <a href="{{ path('logout') }}" class="btn btn-primary">Déconnexion</a>
-    </div>
+        <h5 class="card-header">Vous êtes connecté</h5>
+        <div class="card-body">
+            <h5 class="card-title">Bienvenue {{ app.user.username }}</h5>
+            <p class="card-text">Vous avez pu vous connecter grâce au système d'utilisateur de Symfony</p>
+            <a href="{{ path('logout') }}" class="btn btn-primary">Déconnexion</a>
+        </div>
     </div>
 {% endif %}
 <div class="example-wrapper">
     <h1>Bienvenue {{ controller_name }}! ✅</h1>
-
     Ce message provient de :
     <ul>
         <li>Le controlleur dans <code>/src/Controller/HomeController.php</code></li>
