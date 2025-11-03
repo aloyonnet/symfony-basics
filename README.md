@@ -8,6 +8,11 @@ Il propose les options suivantes :
   * Une Administration (gestion des rôles & des accès)
   * Des Entrypoints spécifiques à la partie visiteur & administration du site
 
+Présentation générale du site
+------------
+
+<img src="site-illustration.png" width="1000" />
+
 Nécessaire
 ------------
 
