@@ -11,10 +11,11 @@ use App\Entity\Post;
 final class SiteController extends AbstractController
 {
     #[Route('/', name: 'home')]
-    public function index(): Response
+    public function index(PostRepository $postRepository): Response
     {
         return $this->render('site/index.html.twig', [
             'controller_name' => 'HomeController',
+            'posts' => $postRepository->FindByMostRecent(8)
         ]);
     }
 
