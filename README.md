@@ -57,7 +57,7 @@ $ php bin/console make:migration
 $ php bin/console doctrine:migrations:migrate
 ```
 
-Charger les utilisateurs fournis par défaut :
+Charger les données fournies par défaut :
 ```bash
 $ php bin/console doctrine:fixtures:load
 ```
