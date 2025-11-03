@@ -36,8 +36,8 @@ class AppFixtures extends Fixture
     private function getUserData(): array
     {
         return [
-            // [$username, $password, $email, $role];
-            ['normal', 'test', ['ROLE_USER']],
+            // [$username, $password, $role];
+            ['user', 'test', ['ROLE_USER']],
             ['admin', 'test', ['ROLE_ADMIN']],
         ];
     }
