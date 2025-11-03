@@ -1,0 +1,15 @@
+{% extends 'admin/base.html.twig' %}
+
+{% block title %}Modification de {{post.title}}{% endblock %}
+
+{% block body %}
+    <h1>Modifier l'article "{{ post.title }}"</h1>
+
+    {{ include('admin/post/_form.html.twig', {'button_label': 'Update'}) }}
+
+<div class="d-flex flex-row">
+    <a class="btn btn-outline-primary" href="{{ path('admin_post_index') }}">Retour à la liste</a>
+
+    {{ include('admin/post/_delete_form.html.twig') }}
+</div>
+{% endblock %}

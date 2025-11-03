@@ -1,0 +1,10 @@
+{% extends 'admin/base.html.twig' %}
+
+{% block title %}Nouvel Article{% endblock %}
+
+{% block body %}
+    <h1>Création d'un article</h1>
+
+    {{ include('admin/post/_form.html.twig') }}
+    <a class="btn btn-outline-primary" href="{{ path('admin_post_index') }}">Retour à la liste</a>
+{% endblock %}

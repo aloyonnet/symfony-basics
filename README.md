@@ -7,6 +7,7 @@ Il propose les options suivantes :
   * Connexion / Inscription / Déconnexion
   * Une Administration (gestion des rôles & des accès)
   * Des Entrypoints spécifiques à la partie visiteur & administration du site
+  * Un CRUD de gestion d'articles
 
 Présentation générale du site
 ------------
