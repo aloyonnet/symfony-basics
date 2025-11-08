@@ -19,6 +19,10 @@
                 <th>Propriétaire</th>
                 <td>{{ post.author.username }}</td>
             </tr>
+            <tr>
+                <th>Date de création</th>
+                <td>{{ post.createdAt|format_datetime('none', 'none', 'EEEE d MMMM Y') }}</td>
+            </tr>
         </tbody>
     </table>
     <a class="btn btn-outline-primary" href="{{ path('post_index') }}">Retour à la liste</a>

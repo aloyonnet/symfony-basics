@@ -16,6 +16,10 @@
                 <td>{{ post.author.username }} ( id: {{ post.author.id }})</td>
             </tr>
             <tr>
+                <th>Date de création</th>
+                <td>{{ post.createdAt|format_datetime('none', 'none', 'EEEE d MMMM Y') }}</td>
+            </tr>
+            <tr>
                 <th>Titre</th>
                 <td>{{ post.title }}</td>
             </tr>
