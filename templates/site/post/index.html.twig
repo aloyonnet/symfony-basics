@@ -5,28 +5,6 @@
 {% block body %}
     <h1>Liste des articles</h1>
 
-    <table class="table align-middle">
-        <thead>
-            <tr>
-                <th>Titre</th>
-                <th>Contenu</th>
-                <th>Actions</th>
-            </tr>
-        </thead>
-        <tbody>
-        {% for post in posts %}
-            <tr>
-                <td>{{ post.title }}</td>
-                <td>{{ post.content }}</td>
-                <td>
-                    <a class="btn btn-outline-primary" href="{{ path('post_show', {'id': post.id}) }}">Afficher</a>
-                </td>
-            </tr>
-        {% else %}
-            <tr>
-                <td colspan="5">Aucun article trouvé.</td>
-            </tr>
-        {% endfor %}
-        </tbody>
-    </table>
+    {# La recherche et le tableau des articles sont chargés dans le composant Live #}
+    {{ component('post_search', { query : query }) }}
 {% endblock %}

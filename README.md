@@ -8,6 +8,7 @@ Il propose les options suivantes :
   * Une Administration (gestion des rôles & des accès)
   * Des Entrypoints spécifiques à la partie visiteur & administration du site
   * Un CRUD de gestion d'articles
+  * Un système de recherche d'articles utilisant les composants Live de Symfony UX
 
 Présentation générale du site
 ------------

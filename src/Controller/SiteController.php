@@ -4,6 +4,7 @@ namespace App\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
+use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\Routing\Attribute\Route;
 use App\Repository\PostRepository;
 use App\Entity\Post;
@@ -20,10 +21,10 @@ final class SiteController extends AbstractController
     }
 
     #[Route('/posts', name: 'post_index', methods: ['GET'])]
-    public function post_index(PostRepository $postRepository): Response
+    public function post_index(PostRepository $postRepository, Request $request): Response
     {
         return $this->render('site/post/index.html.twig', [
-            'posts' => $postRepository->findAll(),
+            'query' => (string) $request->query->get('q', ''),
         ]);
     }
 
