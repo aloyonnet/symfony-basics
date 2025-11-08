@@ -10,7 +10,6 @@ use Symfony\Component\PasswordHasher\Hasher\UserPasswordHasherInterface;
 
 class AppFixtures extends Fixture
 {
-
     public function __construct(
         private readonly UserPasswordHasherInterface $hasher
     ) {
@@ -26,14 +25,14 @@ class AppFixtures extends Fixture
     public function loadUsers(ObjectManager $manager): void
     {
         foreach ($this->getUserData() as [$username, $password, $roles]) {
-        $user = (new User());
-        $user->setUsername($username)
-            ->setPassword($this->hasher->hashPassword($user, $password))
-            ->setRoles($roles);
+            $user = (new User());
+            $user->setUsername($username)
+                ->setPassword($this->hasher->hashPassword($user, $password))
+                ->setRoles($roles);
 
-        $manager->persist($user);
+            $manager->persist($user);
 
-        $this->addReference($username, $user);
+            $this->addReference($username, $user);
         }
 
         $manager->flush();
@@ -42,13 +41,13 @@ class AppFixtures extends Fixture
     public function loadPosts(ObjectManager $manager): void
     {
         foreach ($this->getPostData() as [$title, $slug, $content, $author]) {
-        $post = (new Post());
-        $post->setTitle($title)
-            ->setSlug($slug)
-            ->setContent($content)
-            ->setAuthor($author);
+            $post = (new Post());
+            $post->setTitle($title)
+                ->setSlug($slug)
+                ->setContent($content)
+                ->setAuthor($author);
 
-        $manager->persist($post);
+            $manager->persist($post);
         }
 
         $manager->flush();
@@ -66,7 +65,7 @@ class AppFixtures extends Fixture
         ];
     }
 
-        /**
+    /**
      * @return array|array[]
      */
     private function getPostData(): array

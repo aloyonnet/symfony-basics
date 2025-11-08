@@ -4,7 +4,6 @@ namespace App\Twig\Components;
 
 use App\Entity\Post;
 use App\Repository\PostRepository;
-use Knp\Component\Pager\Pagination\PaginationInterface;
 use Symfony\UX\LiveComponent\Attribute\AsLiveComponent;
 use Symfony\UX\LiveComponent\Attribute\LiveProp;
 use Symfony\UX\LiveComponent\DefaultActionTrait;
@@ -21,7 +20,7 @@ class PostSearch
     {
     }
 
-    public function getPosts(): PaginationInterface|array
+    public function getPosts(): array
     {
         return $this->repository->findBySearchQuery($this->query);
     }
