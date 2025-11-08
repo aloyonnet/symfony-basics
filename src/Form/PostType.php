@@ -20,11 +20,11 @@ class PostType extends AbstractType
             ])
             ->add('slug', null, [
                 'label' => 'Slug',
-                'attr' => ['class' => 'form-control']
+                'attr' => ['class' => 'form-control'],
             ])
             ->add('content', null, [
                 'label' => 'Contenu',
-                'attr' => ['class' => 'form-control']
+                'attr' => ['class' => 'form-control'],
             ])
         ;
     }

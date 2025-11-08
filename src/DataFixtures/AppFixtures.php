@@ -2,10 +2,10 @@
 
 namespace App\DataFixtures;
 
-use Doctrine\Bundle\FixturesBundle\Fixture;
-use Doctrine\Persistence\ObjectManager;
 use App\Entity\User;
 use App\Entity\Post;
+use Doctrine\Persistence\ObjectManager;
+use Doctrine\Bundle\FixturesBundle\Fixture;
 use Symfony\Component\PasswordHasher\Hasher\UserPasswordHasherInterface;
 
 class AppFixtures extends Fixture
@@ -53,9 +53,6 @@ class AppFixtures extends Fixture
         $manager->flush();
     }
 
-    /**
-     * @return array|array[]
-     */
     private function getUserData(): array
     {
         return [
@@ -65,9 +62,6 @@ class AppFixtures extends Fixture
         ];
     }
 
-    /**
-     * @return array|array[]
-     */
     private function getPostData(): array
     {
         return [

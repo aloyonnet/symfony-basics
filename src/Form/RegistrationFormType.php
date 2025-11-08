@@ -26,7 +26,7 @@ class RegistrationFormType extends AbstractType
                 // au lieu d'être défini dans l'objet directement,
                 // tout est lu et encodé dans le controlleur
                 'mapped' => false,
-                'attr' => ['autocomplete' => 'new-password', 'class' => 'form-control'],
+                'attr' => ['class' => 'form-control'],
                 'constraints' => [
                     new NotBlank([
                         'message' => 'Merci d\'entrer un mot de passe',

@@ -10,9 +10,8 @@
 
     {% if app.user %}
         <div class="card m-3">
-            <h5 class="card-header">Vous êtes connecté</h5>
+            <h5 class="card-header">Vous êtes connecté en tant que {{ app.user.username }}</h5>
             <div class="card-body">
-                <h5 class="card-title">Bienvenue {{ app.user.username }}</h5>
                 <p class="card-text">Vous avez pu vous connecter grâce au système d'utilisateur de Symfony</p>
                 <a href="{{ path('logout') }}" class="btn btn-primary">Déconnexion</a>
             </div>

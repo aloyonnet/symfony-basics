@@ -57,7 +57,6 @@ class PostRepository extends ServiceEntityRepository
 
     /**
      * Transforme la chaine de caractères de la recherche en un tableau de termes de recherche
-     *
      * @return string[]
      */
     private function extractSearchTerms(string $searchQuery): array

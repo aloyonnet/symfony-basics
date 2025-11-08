@@ -26,15 +26,15 @@
                         <li class="nav-item">
                             <a class="nav-link" href="{{ path('post_index') }}">Articles</a>
                         </li>
-                        {% if is_granted('ROLE_ADMIN') %}
-                            <li class="nav-item">
-                                <a class="nav-link" href="{{ path('admin') }}">Administration</a>
-                            </li>
-                        {% endif %}
                     </ul>
                     <div class="d-flex">
                         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                             {% if app.user %}
+                                {% if is_granted('ROLE_ADMIN') %}
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="{{ path('admin') }}">Administration</a>
+                                    </li>
+                                {% endif %}
                                 <li class="nav-item">
                                     <a class="nav-link" href="{{ path('logout') }}">Déconnexion</a>
                                 </li>
