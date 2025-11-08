@@ -27,40 +27,39 @@ Installation
 Cloner le projet:
 
 ```bash
-$ git clone https://github.com/aloyonnet/symfony-basics.git
+git clone https://github.com/aloyonnet/symfony-basics.git
 ```
 
 Créer le fichier .env:
 
 ```bash
-$ cp .env-template .env
+cp .env-template .env
 ```
 
 Installer les dépendances:
 
 ```bash
-$ composer install
+composer install
 ```
 
-Créer le lien avec la base de données:
+Créer le lien avec la base de données dans le fichier .env:
 ```bash
-/.env
-$ DATABASE_URL=...
+DATABASE_URL=
 ```
 
 Créer la base de données et son contenu:
 ```bash
-//create the database
-$ php bin/console doctrine:database:create
-//generate the migration
-$ php bin/console make:migration
-//execute the migration
-$ php bin/console doctrine:migrations:migrate
+//création de la base de données
+php bin/console doctrine:database:create
+//génération de la migration
+php bin/console make:migration
+//envoi de la migration dans la base
+php bin/console doctrine:migrations:migrate
 ```
 
 Charger les données fournies par défaut :
 ```bash
-$ php bin/console doctrine:fixtures:load
+php bin/console doctrine:fixtures:load
 ```
 
 Utilisation
@@ -74,7 +73,7 @@ Comptes disponibles avec les Fixtures (utilisateur/mot de passe) :
 Pour un environnement de développement il est possible de lancer un serveur (utilisant <http://localhost:8000> par défaut) avec :
 
 ```bash
-$ symfony serve
+symfony serve
 ```
 
 Si le binary de symfony n'est pas installé, on peut utiliser la commande qui suit:
