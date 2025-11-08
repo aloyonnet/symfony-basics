@@ -1,22 +1,5 @@
 {{ form_start(form) }}
-    {{ form_row(form.title, {
-        label: 'Titre',
-        attr: {
-            'class': 'form-control'
-            }
-    }) }}
-    {{ form_row(form.slug, {
-        label: 'Slug',
-        attr: {
-            'class': 'form-control'
-            }
-    }) }}
-    {{ form_row(form.content, {
-        label: 'Contenu',
-        attr: {
-            'class': 'form-control'
-            }
-    }) }}
+    {{ form_widget(form) }}
 
     <button class="btn btn-success my-2" type="submit">
         Valider
