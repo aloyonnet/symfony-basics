@@ -76,6 +76,9 @@ class AppFixtures extends Fixture
             ['Article 1', 'article-1', 'Contenu de l\'article 1', $this->getReference('admin', User::class)],
             ['Article 2', 'article-2',  'Contenu de l\'article 2', $this->getReference('admin', User::class)],
             ['Article 3', 'article-3',  'Contenu de l\'article 3', $this->getReference('admin', User::class)],
+            ['Test 1', 'test-1',  'Contenu de test 1', $this->getReference('admin', User::class)],
+            ['Test 2', 'test-2',  'Contenu de test 2', $this->getReference('admin', User::class)],
+            ['Test 3', 'test-3',  'Contenu de test 3', $this->getReference('admin', User::class)],
         ];
     }
 }
