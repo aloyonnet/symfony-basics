@@ -14,7 +14,7 @@
             </thead>
             <tbody>
                 {% for post in computed.posts %}
-                    {{ include('site/post/_post.html.twig', { post }) }}
+                    {{ include('site/post/components/_post.html.twig', { post }) }}
                 {% endfor %}
             </tbody>
         </table>
