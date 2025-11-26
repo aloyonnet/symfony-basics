@@ -63,6 +63,12 @@ Charger les données fournies par défaut :
 php bin/console doctrine:fixtures:load
 ```
 
+Compiler le Sass :
+```bash
+php bin/console sass:build
+php bin/console asset-map:compile
+```
+
 Utilisation
 -----
 
@@ -79,5 +85,11 @@ symfony serve
 
 Si le binary de symfony n'est pas installé, on peut utiliser la commande qui suit:
 `php -S localhost:8000 -t public/`
+
+Pour ne pas avoir à recompiler le Sass à chaque modification en développement :
+
+```bash
+php bin/console sass:build --watch
+```
 
 [1]: https://symfony.com/doc/current/reference/requirements.html

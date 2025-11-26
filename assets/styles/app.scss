@@ -1,0 +1,5 @@
+@use 'components/variables' as var;
+
+.navbar-brand {
+    color: var.$blue;
+}
