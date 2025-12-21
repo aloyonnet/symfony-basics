@@ -19,7 +19,7 @@ Présentation générale du site
 Nécessaire
 ------------
 
-  * PHP 8 ou plus
+  * PHP 8.4 ou plus
   * plus sur [besoins de symfony][1]
 
 Installation
