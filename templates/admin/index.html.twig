@@ -3,13 +3,9 @@
 {% block title %}Accueil{% endblock %}
 
 {% block body %}
-    <div class="info-wrapper">
-        <h1>Exemple d'accueil de l'administration</h1>
-
-        Ce message provient de :
-        <ul>
-            <li>Le controlleur dans <code>/src/Controller/Administration/AdminController.php</code></li>
-            <li>Le template dans <code>/templates/admin/index.html.twig</code></li>
-        </ul>
-    </div>
+    {{ component('Wrapper', {
+        title: "Exemple d'accueil de l'administration",
+        controller: "/src/Controller/Administration/AdminController.php",
+        template: "/templates/admin/index.html.twig"
+    }) }}
 {% endblock %}

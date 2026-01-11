@@ -12,14 +12,12 @@
             </div>
         </div>
     {% endif %}
-    <div class="info-wrapper">
-        <h1>Exemple de page d'accueil</h1>
-        Cette page provient de :
-        <ul>
-            <li>Le controlleur dans <code>/src/Controller/SiteController.php</code></li>
-            <li>Le template dans<code>/templates/site/index.html.twig</code></li>
-        </ul>
-    </div>
+    
+    {{ component('Wrapper', {
+        title: "Exemple de page d'accueil",
+        controller: "/src/Controller/SiteController.php",
+        template: "/templates/site/index.html.twig"
+    }) }}
 
     <h2>Articles récents</h2>
     <div class="d-flex flex-wrap">
