@@ -15,10 +15,10 @@ use Symfony\Component\Routing\Attribute\Route;
 final class PostController extends AbstractController
 {
     #[Route(name: 'admin_post_index', methods: ['GET'])]
-    public function index(PostRepository $postRepository): Response
+    public function index(PostRepository $postRepository, Request $request): Response
     {
         return $this->render('admin/post/index.html.twig', [
-            'posts' => $postRepository->findAll(),
+            'query' => (string) $request->query->get('q', ''),
         ]);
     }
 

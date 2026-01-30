@@ -1,0 +1,7 @@
+<tr>
+    <td>{{ post.title }}</td>
+    <td>{{ post.content }}</td>
+    <td>
+        <a class="btn btn-outline-primary" href="{{ path('admin_post_show', {'id': post.id}) }}">Afficher</a>
+    </td>
+</tr>

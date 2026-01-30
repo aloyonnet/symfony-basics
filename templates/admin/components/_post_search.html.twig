@@ -1,0 +1,26 @@
+<div{{ attributes }}>
+    <label>
+        <input type="text" data-model="query" placeholder="Recherche d'un article ici" class="mb-4" autofocus="autofocus"/>
+    </label>
+
+    {% if computed.posts|length > 0 %}
+        <table class="table align-middle">
+            <thead>
+                <tr>
+                    <th>Titre</th>
+                    <th>Contenu</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for post in computed.posts %}
+                    {{ include('admin/post/components/_post.html.twig', { post }) }}
+                {% endfor %}
+            </tbody>
+        </table>
+    {% else %}
+        <div class="mx-10 text-center">
+            Aucun article trouvé pour votre recherche.
+        </div>
+    {% endif %}
+</div>
