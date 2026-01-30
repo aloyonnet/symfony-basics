@@ -3,16 +3,6 @@
 {% block title %}Accueil{% endblock %}
 
 {% block body %}
-    {% if app.user %}
-        <div class="card m-3">
-            <h5 class="card-header">Vous êtes connecté en tant que {{ app.user.username }}</h5>
-            <div class="card-body">
-                <p class="card-text">Vous avez pu vous connecter grâce au système d'utilisateur de Symfony</p>
-                <a href="{{ path('logout') }}" class="btn btn-primary">Déconnexion</a>
-            </div>
-        </div>
-    {% endif %}
-    
     {{ component('Wrapper', {
         title: "Exemple de page d'accueil",
         controller: "/src/Controller/SiteController.php",
