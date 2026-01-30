@@ -1,7 +1,7 @@
 <div{{ attributes }}>
-    <label>
+    <form>
         <input type="text" data-model="query" placeholder="Recherche d'un article ici" class="mb-4" autofocus="autofocus"/>
-    </label>
+    </form>
 
     {% if computed.posts|length > 0 %}
         <table class="table align-middle">

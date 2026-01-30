@@ -1,7 +1,12 @@
 <div{{ attributes }}>
-    <label>
+    <form>
         <input type="text" data-model="query" placeholder="Recherche d'un article ici" class="mb-4" autofocus="autofocus"/>
-    </label>
+
+        <select class="post-search-select" data-model="date">
+            <option value="DESC">Plus récent</option>
+            <option value="ASC">Plus ancien</option>
+        </select>
+    </form>
 
     {% if computed.posts|length > 0 %}
         <table class="table align-middle">

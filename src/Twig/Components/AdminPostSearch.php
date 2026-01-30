@@ -16,12 +16,15 @@ class AdminPostSearch
     #[LiveProp(writable: true)]
     public ?string $query = null;
 
+    #[LiveProp(writable: true)]
+    public string $date = 'ASC';
+
     public function __construct(private PostRepository $repository)
     {
     }
 
     public function getPosts(): array
     {
-        return $this->repository->findBySearchQuery($this->query);
+        return $this->repository->findByAdminSearchQuery($this->query, $this->date);
     }
 }
