@@ -5,6 +5,9 @@
 {% block body %}
     <h1>Liste des articles</h1>
 
+    <a class="btn btn-outline-primary mb-3" href="{{ path('admin_post_new') }}">Créer un article</a>
+
     {# La recherche et le tableau des articles sont chargés dans le composant Live #}
     {{ component('admin_post_search', { query : query }) }}
+    
 {% endblock %}
