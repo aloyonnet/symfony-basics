@@ -66,16 +66,15 @@ class AppFixtures extends Fixture
     private function getPostData(): array
     {
         $admin = $this->getReference('admin', User::class);
-        $date = new \DateTimeImmutable('now');
 
         return [
             // [$title, $slug, $content, $author, $createdAt];
-            ['Article 1', 'article-1', 'Contenu de l\'article 1', $admin, $date],
-            ['Article 2', 'article-2',  'Contenu de l\'article 2', $admin, $date],
-            ['Article 3', 'article-3',  'Contenu de l\'article 3', $admin, $date],
-            ['Test 1', 'test-1',  'Contenu de test 1', $admin, $date],
-            ['Test 2', 'test-2',  'Contenu de test 2', $admin, $date],
-            ['Test 3', 'test-3',  'Contenu de test 3', $admin, $date],
+            ['Article 1', 'article-1', 'Contenu de l\'article 1', $admin, new \DateTimeImmutable('now')],
+            ['Article 2', 'article-2',  'Contenu de l\'article 2', $admin, new \DateTimeImmutable('now + 1days')],
+            ['Article 3', 'article-3',  'Contenu de l\'article 3', $admin, new \DateTimeImmutable('now +2days')],
+            ['Test 1', 'test-1',  'Contenu de test 1', $admin, new \DateTimeImmutable('now + 3days')],
+            ['Test 2', 'test-2',  'Contenu de test 2', $admin, new \DateTimeImmutable('now + 4days')],
+            ['Test 3', 'test-3',  'Contenu de test 3', $admin, new \DateTimeImmutable('now + 5days')],
         ];
     }
 }

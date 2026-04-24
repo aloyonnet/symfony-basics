@@ -28,15 +28,13 @@ class RegistrationFormType extends AbstractType
                 'mapped' => false,
                 'attr' => ['class' => 'form-control'],
                 'constraints' => [
-                    new NotBlank([
-                        'message' => 'Merci d\'entrer un mot de passe',
-                    ]),
-                    new Length([
-                        'min' => 6,
-                        'minMessage' => 'Votre mot de passe doit contenir au moins {{ limit }} caractères.',
+                    new NotBlank(message : 'Merci d\'entrer un mot de passe'),
+                    new Length(
+                        min : 6,
+                        minMessage : 'Votre mot de passe doit contenir au moins {{ limit }} caractères.',
                         // longueur maximale autorisée par Symfony pour des raisons de sécurité
-                        'max' => 4096,
-                    ]),
+                        max : 4096
+                    ),
                 ],
             ])
             ->add('agreeTerms', CheckboxType::class, [
@@ -44,9 +42,7 @@ class RegistrationFormType extends AbstractType
                 'mapped' => false,
                 'attr' => ['class' => 'form-check-input'],
                 'constraints' => [
-                    new IsTrue([
-                        'message' => 'Vous devez accepter les termes.',
-                    ]),
+                    new IsTrue(message : 'Vous devez accepter les termes.'),
                 ],
             ])
         ;
