@@ -11,7 +11,7 @@ use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Attribute\Route;
 
-#[Route('/administration/post')]
+#[Route('/admin/post')]
 final class PostController extends AbstractController
 {
     #[Route(name: 'admin_post_index', methods: ['GET'])]
